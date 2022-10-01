@@ -10,6 +10,7 @@ class Circle(shape.Shape):
         :param color: the color of the circle (inherited from the shape class)
         :param radius: the radius of the circle
         """
+
         super().__init__(color)
         self.__radius = radius
 
