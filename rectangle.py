@@ -10,6 +10,7 @@ class Rectangle(shape.Shape):
         :param height: the height of the rectangle
         :param width: the width of the rectangle
         """
+
         super().__init__(color)
         self.__height = height
         self.__width = width
