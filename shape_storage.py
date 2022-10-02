@@ -10,6 +10,7 @@ class ShapeStorage:
         """
         the constructor function
         """
+
         self.__my_shapes = []
 
     def generate(self, x):
