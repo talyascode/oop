@@ -1,17 +1,22 @@
 import random
-
+from circle import *
+from rectangle import *
 # color dictionary
 color_num = {1: 'blue', 2: 'red', 3: 'black'}
-from circle import *
-from sqaure import *
-from rectangle import *
 
 
 class ShapeStorage:
     def __init__(self):
+        """
+        the constructor function
+        """
         self.__my_shapes = []
 
     def generate(self, x):
+        """
+        randomly creating random shapes x times
+        :param x: the amount of shapes that are being created
+        """
         for x in range(x):
             color = random.randint(1, 3)
             color = color_num[color]
@@ -33,18 +38,30 @@ class ShapeStorage:
             self.__my_shapes.append(new_shape)
 
     def sum_areas(self):
-        sum = 0
+        """
+        summing all the areas of the shapes in the list
+        :return: the sum
+        """
+        area_sum = 0
         for element in self.__my_shapes:
-            sum += element.get_area()
-        return sum
+            area_sum += element.get_area()
+        return area_sum
 
     def sum_perimeter(self):
-        perimeter = 0
+        """
+        summing all the perimeters of the shapes in the list
+        :return: the sum
+        """
+        perimeter_sum = 0
         for element in self.__my_shapes:
-            perimeter += element.get_perimeter()
-        return perimeter
+            perimeter_sum += element.get_perimeter()
+        return perimeter_sum
 
     def count_colors(self):
+        """
+        counting how many colors there are from each color of the shapes in the list
+        :return: a dictionary of how many colors there are from each color
+        """
         red_counter = 0
         blue_counter = 0
         black_counter = 0
