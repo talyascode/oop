@@ -8,7 +8,6 @@ class Shape:
         the constructor function
         :param color: the color of the shape
         """
-
         self.__color = color
 
     def set_color(self, color):
